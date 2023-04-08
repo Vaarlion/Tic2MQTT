@@ -15,3 +15,4 @@ I'm not a dev so this is a cobbled-together python script. It was quite clean be
  - [X] feature: Add makefile to install it cleanly
  - [ ] bugfix: Find out why automatic cleanup on close don't work
  - [ ] feature: Bring ADPS to 0 when not present
+ - [ ] feature: Add a way to manage udev rule for the serial device

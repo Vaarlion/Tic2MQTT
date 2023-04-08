@@ -21,6 +21,7 @@ create_venv: # Create a python venv in the current directory
 
 chmod_script: # Allow execution of the python script
 	chmod 0755 $(current_dir)/Tic2MQTT.py
+	chmod 0660 $(current_dir)/configurations.ini
 
 pip_requirements: # Install all pip requirement in the venv
 	test -d $(current_dir)/venv
@@ -32,7 +33,7 @@ install_service: # Simlink the service file in the systemd directory and reload 
 	sudo systemctl daemon-reload
 
 inform_todo: # infrome the user of the list of thing still to do manualy
-	$(info To finish instalation, please create a system user called tic_user, fill the config file at $(current_dir)/configurations.inn and run `sudo systemctl enable --now tic2mqtt.service`)
+	$(info To finish instalation, please create a system user called tic_user, fill the config file at $(current_dir)/configurations.ini and run `sudo systemctl enable --now tic2mqtt.service`)
 
 
 help: ## display this message
