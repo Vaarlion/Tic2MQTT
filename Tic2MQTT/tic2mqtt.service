@@ -1,0 +1,13 @@
+[Unit]
+Description=Teleinfo server to MQTT for Home Assistant
+After=network-online.target
+
+[Service]
+Type=simple
+User=tic_user
+Environment=PYTHONUNBUFFERED=true
+WorkingDirectory=/opt/Tic2MQTT/
+ExecStart=/opt/Tic2MQTT/venv/bin/python3 /opt/Tic2MQTT/Tic2MQTT.py -c /opt/Tic2MQTT/configurations.ini -v
+
+[Install]
+WantedBy=multi-user.target

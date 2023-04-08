@@ -11,7 +11,7 @@ This is based on a fork of `pyticcom`, `asyncio`, `asyncio-mqtt`, `homeassistant
 I'm not a dev so this is a cobbled-together python script. It was quite clean before i tried to add home assistant mqtt discovery ... but for my need it will be good enough.
 
 ## TODO
-[ ] feature: Add systemd service file
-[ ] feature: Add makefile to install it cleanly
-[ ] bugfix: Find out why automatic cleanup on close don't work
-[ ] feature: Bring ADPS to 0 when not present
+ - [X] feature: Add systemd service file
+ - [X] feature: Add makefile to install it cleanly
+ - [ ] bugfix: Find out why automatic cleanup on close don't work
+ - [ ] feature: Bring ADPS to 0 when not present
