@@ -260,7 +260,7 @@ class Teleinfo_module:
                         client=self.discovery_mqtt_client,
                         device=self.discovery_device,
                     ),
-                    unit=value["unit"],
+                    unit=value["unit"] if value["unit"] != "" else None,
                     device_class=devices_data_matching[key]["class"],
                     state_topic=self.topic,
                     state_template=devices_data_matching[key]["value_template"],
